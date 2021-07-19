@@ -4,7 +4,7 @@ variable "aws_region" {
 }
 
 variable "PATH_TO_PUBLIC_KEY" {
-  default = "ec2.pem"
+  default = "ec2"
 }
 
 variable "vpc_id" {
@@ -26,5 +26,24 @@ variable "public_subnets" {
 
 variable "private_subnets" {
     description = "private_subnets"
+    type        = string
+}
+
+variable "ami_id" {
+  default = "ami-00bf4ae5a7909786c"
+}
+
+variable "private_instance_type" {
+    description = "private_ec2_type"
+    type        = string
+}
+
+variable "availability_zone" {
+    description = "availability zone"
+    default        = "ap-south-1a"
+}
+
+variable "public_instance_type" {
+    description = "private_ec2_type"
     type        = string
 }
